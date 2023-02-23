@@ -1,0 +1,106 @@
+
+  <app-header></app-header>
+  <div class="container">
+
+<!-- 
+    <form (ngSubmit)="buscarnoticia()">
+      <div class="form-group">
+          <label for="exampleSelect1" class="form-label mt-4">Categoria</label>
+          <select class="form-select form-select-lg" name="categoria" [(ngModel)]="categoriaselecionada">
+            <option *ngFor="let categoria of categorias"  [value]="categoria.value">{{categoria.nombre}}</option>
+        
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-5 ">Buscar</button>
+  </form>
+  -->
+
+  <!-- <form>
+    <h4>Filtrar por</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Categoria</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="food" >
+       
+        <mat-option *ngFor="let opcion of opcion "[value]="opcion.Editorial" >
+          {{opcion.Editorial}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p> Seleccionado: {{selectedValue | json}} </p>
+
+  </form>  -->
+   
+
+  <app-migaspan></app-migaspan>
+<div align="center">
+
+
+  <mat-form-field class="example-full-width" >
+                 
+    <input type="text"
+           placeholder="BUSCAR"
+           aria-label="Number"
+           matInput
+           [(ngModel)]="Termino"
+           [matAutocomplete]="auto"
+           (input)="buscando()">
+  
+  
+    <mat-autocomplete #auto="matAutocomplete"
+    (optionSelected)="opcionSeleccionada($event) ">
+  
+  
+      <mat-option *ngFor="let heroe of heroe  "[value]="heroe">
+        {{heroe.superhero}}
+      </mat-option>
+  
+    <mat-option value="" *ngIf="heroe.length==0 &&Termino.trim().length>0">
+      Nose encontro nada con este termino {{Termino}}
+    </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+  
+   <div *ngIf="heroeSeleccionado">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-3" >
+        <img class="image" [src]="heroeSeleccionado | imagen">
+        <div class="wrapper-text">
+            <div class="title">{{heroeSeleccionado.superhero}}</div>
+            <div class="sub-title">{{heroeSeleccionado.alter_ego}}</div>
+   
+            <button class="btn btn-primary">Añadir al Carrito</button>
+      </div>
+    </div>
+
+
+
+  </div> 
+
+   
+      
+   
+  </div>
+  
+
+</div>
+   
+
+
+
+<app-card  ></app-card>
+
+
+
+
+
+
+
+</div>
+
+<app-footer></app-footer>
+
+
+
+

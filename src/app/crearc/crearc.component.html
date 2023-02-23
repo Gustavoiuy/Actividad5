@@ -1,0 +1,110 @@
+<app-header></app-header>
+<div class="container">
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+      <li class="breadcrumb-item"><a href="/iniciar-sesion">INICIAR SESION</a></li>
+      <li class="breadcrumb-item active" aria-current="page">INICIAR SESIÓN</li>
+    </ol>
+  </nav>
+
+
+  <div class="signupFrm">
+    <form (ngSubmit)="onSubmit()" [formGroup]="logForm"class="form">
+ 
+      <h1 class="title">INICIAR SESION</h1>
+ <div class="inputContainer">
+        <input type="text" class="input"id="email" name="email"  placeholder="" required formControlName="email">
+        <label for="" class="label">EMAIL</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('email')">Ingrese un emial.</div>
+      </div>
+ 
+      <div class="inputContainer">
+        <input type="password" class="input" id="password" name="password"  placeholder="a" required formControlName="password">
+        <label for="" class="label">CONTRASEÑA</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('password')">Ingrese una contraseña.</div>
+
+      </div>
+      <br>
+      <a routerLink="/avisodpriv">¿Olvidaste tu contraseña?</a>
+      <br>
+      <a routerLink="/iniciar-sesion">CREAR UNA CUENTA </a>
+      <br>
+      <br>
+     <div align="right">
+            <button type="submit" class="btn btn-info">ENTRAR</button>  
+     </div>
+
+
+     
+     
+      <br>
+      
+      
+     
+     
+    
+    </form>
+  </div>
+       
+
+  
+      
+              
+    
+  
+    
+<br>
+
+</div>
+
+
+
+<app-footer></app-footer>
+
+<!-- <div class="signupFrm">
+  <form (ngSubmit)="onSubmit()" [formGroup]="logForm"class="form">
+
+    <h1 class="title">INICIAR SESION</h1>
+<div class="inputContainer">
+      <input type="text" class="input"id="nameuser" name="nameuser"  placeholder="a" required formControlName="nameuser">
+      <label for="" class="label">NOMBRE DE USUARIO</label>
+      <div *ngIf="logForm.get('nameuser')?.touched && logForm.get('nameuser')?.errors?.['required']"
+      class="alert alert-danger">Ingrese un nombre de usuario.</div>
+    </div>
+
+    <div class="inputContainer">
+      <input type="password" class="input" id="pass" name="pass"  placeholder="a" required formControlName="pass">
+      <label for="" class="label">CONTRASEÑA</label>
+      <div *ngIf="logForm.get('pass')?.touched && logForm.get('pass')?.errors?.['required']"
+      class="alert alert-danger">Ingrese una contraseña.</div>
+
+      <div *ngIf="logForm.get('pass')?.touched && logForm.get('pass')?.errors?.['minlength']"
+      class="alert alert-danger">La contraseña debe ser minimo 8 caracteres.</div>
+    </div>
+    <br>
+    <a routerLink="/avisodpriv">¿Olvidaste tu contraseña?</a>
+    
+   <div align="right">
+          <button type="submit" class="btn btn-info" [disabled]="logForm.invalid">ENTRAR</button>  
+   </div>
+
+
+   
+    <div *ngIf="actived" class="alert alert-success">{{mensaje}}</div>
+    <br>
+    
+    
+   
+   
+  
+  </form>
+</div>
+      -->
+
+
+    
+            
+  

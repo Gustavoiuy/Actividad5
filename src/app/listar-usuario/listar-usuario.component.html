@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container mt-5">
+
+ <div class="card">
+    <div class="card-header">
+         <a class="btn btn-success"routerLink="/agregarusuario/">agregar nuevo usuario</a> 
+    </div>
+    <div class="card-body mt-2">
+        <h4>lista de Usuarios</h4>
+       <div class="table-responsive">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>correo</th>
+                    <th>acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of Usuarios; let iControl=index">
+                   
+                    <td>{{iControl+1}}</td>
+                    <td>{{usuario.name}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>
+                        <a class="btn btn-info"routerLink="/editar-usuario/{{usuario.id}}">Editar</a> 
+                        <a class="btn btn-danger"   role="button">Borrar</a></td>
+
+                </tr>
+               
+            </tbody>
+        </table>
+       </div>
+       
+       
+    </div>
+    
+ </div>
+</div>

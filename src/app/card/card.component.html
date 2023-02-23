@@ -1,0 +1,28 @@
+ 
+ 
+ <!-- <div class="grid" *ngFor="let heroe of heroes">
+   
+    </div>
+    <div>
+       
+    </div> -->
+
+   
+  
+     
+
+
+    
+<div class="container text-center">
+    <div class="row">
+      <div class="col-sm-3"  *ngFor="let heroe of heroes">
+        <img class="image" [src]="heroe | imagen">
+        <div class="wrapper-text">
+            <div class="title">{{heroe.superhero}}</div>
+            <div class="sub-title">{{heroe.alter_ego}}</div>
+   
+            <button class="btn btn-primary">Añadir al Carrito</button>
+      </div>
+    </div>
+  </div> 
+

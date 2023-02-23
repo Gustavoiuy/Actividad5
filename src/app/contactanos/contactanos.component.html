@@ -1,0 +1,69 @@
+
+<app-header></app-header>
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/acerca-dnosotros">PEDIDOS</a></li>
+      <li class="breadcrumb-item active" aria-current="page">INICIAR SESIÓN</li>
+    </ol>
+  </nav>
+
+  <div class="container">
+
+  <div class="signupFrm">
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm"class="form">
+      <div class="img">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png"
+      
+             width="60"
+             height="71">
+      </div>
+    
+      <h2 class="title" 
+      >CONTACTANOS</h2>
+ <div class="inputContainer">
+  
+  <input type="text" class="input" id="name" name="name"placeholder="a" required formControlName="name">
+  <label for="" class="label">NOMBRE</label>
+  <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']"
+    class="alert alert-danger">Ingrese su nombre por favor.</div>
+    <br>
+
+  <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['minlength']"
+    class="alert alert-danger">Su nombre debe ser mayor a 
+    {{ contactForm.get('name')?.errors?.['minlength']?.requiredLength}} caracteres.</div>
+      </div>
+   
+      <div class="inputContainer">
+        <input type="email" class="input"id="correo" name="correo" placeholder="a" required formControlName="correo">
+        <label for="" class="label">CORREO</label>
+        <div *ngIf="contactForm.get('correo')?.touched && contactForm.get('correo')?.errors?.['required']"
+        class="alert alert-danger">Ingrese su correo.</div>
+      </div>
+      <div class="inputContainer">
+      <label for="comment" class="label">ASUNTO</label>
+      <textarea class="form-control" name="comment" id="comment" rows="4" placeholder="Leave a comment......"
+        formControlName="comment" required></textarea>
+      <div *ngIf="contactForm.get('comment')?.touched && contactForm.get('comment')?.errors?.['required']"
+        class="alert alert-danger">No ha ingresado su asunto</div>
+      <div class="d-grid gap-2 col-4 float-end">
+        <button type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">ENVIAR</button>
+      </div>
+      </div>
+      
+  </form>
+  
+  </div>
+  
+
+  
+    
+              
+    
+    
+<br>
+
+
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container"></div>
+
+<div class="card">
+    <div class="card-header">
+   Editar usuario
+    </div>
+    <div class="card-body">
+        
+      <form [formGroup]="formulariodeusuarios" (ngSubmit)="enviarDatos()">
+
+    <div class="mb-3">
+      <label for="" class="form-label">Nombre</label>
+      <input formControlName ="nombre" type="text"
+        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escribe tu nombre">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Correo</label>
+        <input formControlName ="correo" type="email"
+          class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escribe tu correo">
+      </div>
+      
+      <div class="btn-group" role="group" aria-label="Button group name">
+        <button  type="submit"class="btn btn-info">Agregar</button>
+        <button  type="button"class ="btn btn-danger"routerLink="/listar-usuario/">Cancelar</button>
+    
+      </div>
+     </form>
+
+    </div>
+    
+</div>

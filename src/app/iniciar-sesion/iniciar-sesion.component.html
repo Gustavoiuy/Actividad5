@@ -1,0 +1,126 @@
+<app-header></app-header>
+<div class="container">
+
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/iniciar-sesion">INICIAR SESION</a></li>
+      <li class="breadcrumb-item active" aria-current="page">INICIAR SESIÓN</li>
+    </ol>
+  </nav>
+
+  
+  <div class="signupFrm">
+    <form (ngSubmit)="onSubmit()" [formGroup]="logintForm"class="form">
+ 
+      <h1 class="title">REGISTRARSE</h1>
+ <div class="inputContainer">
+        <input type="text" class="input"id="name" name="name"placeholder="a"required formControlName="name">
+        <label for="" class="label">NOMBRE</label>
+        <div 
+       
+        class="alert alert-danger"*ngIf="camponovalido('name')">{{nombreError}}</div>
+   
+      
+  
+  </div>
+ 
+      <!-- <div class="inputContainer">
+        <input type="text" class="input" id="appate" name="appate"placeholder="a"required formControlName="appate">
+        <label for="" class="label">Apellido Paterno</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('appate')">{{pater}}</div>
+     
+    
+       </div>
+     -->
+
+
+     
+      <!-- <div class="inputContainer">
+        <input type="text" class="input" id="apmate" name="apmate" placeholder="a" required formControlName="apmate">
+        <label for="" class="label">Apellido Materno</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('apmate')">{{mater}}</div>
+      </div>
+  
+    
+      
+      <div class="inputContainer">
+        <input type="text" class="input" id="nameuser" name="nameuser"  placeholder="a" required formControlName="nameuser">
+        <label for="" class="label">NOMBRE DE USUARIO</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('nameuser')">{{usererror}}</div>
+      </div> -->
+
+
+      <div class="inputContainer">
+        <input type="email" class="input" id="email" name="email"  placeholder="a" required formControlName="email">
+        <label for="" class="label">CORREO</label>
+      
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('email')">{{emailError}}</div>
+      
+      </div>
+      
+      <!-- <div class="inputContainer">
+        <input type="number" class="input"id="edad" name="edad"  placeholder="a" required formControlName="edad">
+        <label for="" class="label">EDAD</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('edad')">{{edaderror}}</div>
+        
+        
+    
+       
+   
+      </div>
+  -->
+      <div class="inputContainer">
+        <input type="password" class="input"id="password" name="password"  placeholder="a" required formControlName="password">
+        <label for="" class="label">CONTRASEÑA</label>
+        <div 
+        class="alert alert-danger"*ngIf="camponovalido('password')">Ingrese una contraseña.</div>
+
+       
+      </div>
+
+      <div class="inputContainer">
+        <input type="password" class="input"id="pass2" name="pass2"  placeholder="a" required formControlName="pass2">
+        <label for="" class="label">CONFIRMAR CONTRASEÑA</label>
+        <div    
+        class="alert alert-danger"*ngIf="camposiguales()">Las contraseñas no coinciden.</div>
+
+      
+
+      </div>
+        <div class="form-group">
+  
+      <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox" placeholder="a" required formControlName="checkbox">
+      <label class="form-check-label" for="gridCheck">
+        Acepta los terminos y condiciones de nuestro <a routerLink="/avisodpriv">Aviso de privacidad</a>
+
+      </label>
+    
+    </div>
+
+      <div align="right">
+      <button type="submit" class="btn btn-primary">REGISTRARSE</button>
+      
+      </div>
+    
+    </form>
+  </div>
+  
+
+  
+      
+              
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<app-footer></app-footer>

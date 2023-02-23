@@ -1,0 +1,28 @@
+:host{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: block;
+}
+.title{
+    font-weight: 600;
+}
+.favorite-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.favorite-list li{
+    padding: 1rem;
+}
+.mini-image{
+    width: 7rem;
+    height: 4rem;
+}
+.divider{
+    border-top: solid 1px rgb(45, 160, 195);
+}
+
+.title-inside{
+    font-weight: 800;
+}

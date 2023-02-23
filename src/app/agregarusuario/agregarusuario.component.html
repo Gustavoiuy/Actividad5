@@ -1,0 +1,46 @@
+
+<app-header></app-header>
+<div class="container mt-5">
+
+<div class="card">
+    <div class="card-header">
+   Agregar usuario
+    </div>
+    <div class="card-body">
+        
+      <form [formGroup]="formulariodeusuarios"(ngSubmit)="enviarDatos()">
+
+    <div class="mb-3">
+      <label for="" class="form-label">Nombre</label>
+      <input type="text"
+        class="form-control" name="nombre"  id="nombre" aria-describedby="helpId" placeholder="Escribe tu nombre"required formControlName="nombre">
+    </div>
+    <div *ngIf="formulariodeusuarios.get('nombre')?.touched && formulariodeusuarios.get('nombre')?.errors?.['required']"
+    class="alert alert-danger">Ingrese su nombre por favor.</div>
+
+    <div *ngIf="formulariodeusuarios.get('nombre')?.touched && formulariodeusuarios.get('nombre')?.errors?.['minlength']"
+    class="alert alert-danger">Su nombre debe ser mayor a 
+    {{ formulariodeusuarios.get('nombre')?.errors?.['minlength']?.requiredLength}} caracteres.</div>
+    
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Correo</label>
+        <input type="email"
+          class="form-control" name="correo"   id="correo" aria-describedby="helpId" placeholder="Escribe tu correo"required formControlName="correo">
+      </div>
+      <div *ngIf="formulariodeusuarios.get('correo')?.touched && formulariodeusuarios.get('correo')?.errors?.['required']"
+      class="alert alert-danger">Ingrese su correo por favor.</div>
+      <div *ngIf="formulariodeusuarios.get('correo')?.touched && formulariodeusuarios.get('correo')?.errors?.['email']"
+      class="alert alert-danger">Ingrese un correo.</div>
+      
+      <div class="btn-group" role="group" aria-label="Button group name">
+        <button  type="submit"class="btn btn-info">Agregar</button>
+        <button  type="button"class="btn btn-danger"routerLink="/listar-usuario/">Cancelar</button>
+    
+      </div>
+     </form>
+
+    </div>
+    
+</div>
+</div>

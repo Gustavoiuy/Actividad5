@@ -1,0 +1,19 @@
+<div>
+    <h3 class="title" >CARRITO DE COMPRAS</h3>
+</div>
+<div class="divider">
+    <div> 
+        <ul class="favorite-list">
+            <li *ngFor="let videos of listaVideos">
+                <div class="card">
+                    <img class="mini-image" [src]="videos.data.image" alt="">
+                </div>
+                <div>
+                    <div class="title-inside">
+                        {{videos.data.titulo}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
