@@ -1,12 +1,19 @@
 <app-header></app-header>
 <div class="container">
-<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      
-      <li class="breadcrumb-item"><a href="/iniciar-sesion">INICIAR SESION</a></li>
-      <li class="breadcrumb-item active" aria-current="page">INICIAR SESIÓN</li>
-    </ol>
-  </nav>
+
+  <div class="container container-md-fluid">
+    <div class="row ">
+        <div class="col-auto col-md-10  ">
+            <nav aria-label="breadcrumb " class="first   d-md-flex bg-violet" >
+                <ol class="breadcrumb indigo lighten-6 first-1 shadow-lg mb-5  ">
+                    <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase" routerLink="/home"><span  >HOME</span></a><img class="ml-md-3" src="https://img.icons8.com/offices/100/000000/double-right.png" width="20" height="20"> </li>
+                    <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase" routerLink="/crearc"><span >LOGIN</span></a><img class="ml-md-3" src="https://img.icons8.com/offices/100/000000/double-right.png" width="20" height="20"></li>
+                    <li class="breadcrumb-item font-weight-bold mr-0 pr-0"><a class="black-text active-1" routerLink="/crearc"><span >INICIAR SESION</span></a> </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 
 
   <div class="signupFrm">
